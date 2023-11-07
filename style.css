@@ -1,0 +1,106 @@
+/*  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary:#7380ec;
+  --color-danger:#ff7782;
+  --color-success:#41f1b6;
+  --color-warning:#ffbb55;
+  --color-white:#fff;
+  --color-info-dark:#7d8da1;
+  --color-info-light:#dce1eb;
+  --color-dark:#363949;
+  --color-light:rgba(132 139 200/0.18);
+  --color-primary-variant:#111e88;
+  --color-dark-variant:#677483;
+
+ --color-background:#f6f6f9;
+
+ --card-border-radius: 2rem;
+ --border-radius-1: 0.4rem;
+ --border-radius-2: 0.8rem;
+ --border-radius-3: 1.2rem;
+
+ --card-padding: 1.8rem;
+ --padding-1: 1.2rem;
+ --box-shadow: 0 2rem 3rem var(var(--color-light))
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-background);
+  width: 100vw;
+  height: 100vh;
+}
+
+.parent-container{
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  /* border: 1rem red solid; */
+  margin: 0 auto;
+  gap: 2rem;
+  height: 100vh;
+}
+aside{
+  margin-left: 2rem;
+}
+aside .top-bar img{
+  width: 2rem;
+  height: 2rem;
+}
+aside .top-bar{
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+aside .top-bar #close-btn{
+  display: none;
+}
+aside .top-bar span{
+  color: var(--color-danger);
+}
+/* Side bar styling */
+
+aside .side-bar{
+  margin-top: 3rem;
+  font-size: 0.60rem;
+  position: relative;
+  height: 88%;
+}
+
+aside .side-bar a:last-child{
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+}
+
+aside .side-bar a{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 3rem;
+  color: var(--color-info-dark);
+}
+aside .side-bar a .inline-text{
+  background-color: var(--color-danger);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: 0.27rem;
+  color: var(--color-white);
+}
+
+aside .side-bar a:hover{
+  color: var(--color-primary);
+}
+aside .side-bar a.active{
+  background-color: var(--color-light);
+}
