@@ -3,7 +3,7 @@
 An eCommerce Site Dashboard Project
 This is a group project where a team of students has come together to create a responsive dashboard for an eCommerce website. The primary goal of this project is to enhance our knowledge and skills in HTML, CSS, and JavaScript.
 
-## Table of Contents 
+## 📗 Table of Contents 
   - Project Description
   - Project Features
   - Getting Started
@@ -35,14 +35,16 @@ Before you begin, make sure you have the following software and tools installed:
 --Git
 
 ## Installation
---Clone the repository to your local machine:
+
+--  Clone the repository to your local machine:
+
 bash
-Copy code
-` git clone https://github.com/sharpartzgh/Responsive-Dashboard.git`
+```sh
+  git clone https://github.com/sharpartzgh/Responsive-Dashboard.git
+```
 - Open the project in your code editor.
 
 Start a local development server or use a tool like Live Server to view the project.
-
 
 # Team-Members
 - Xandra - Front-end Developer
