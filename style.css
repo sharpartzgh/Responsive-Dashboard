@@ -24,7 +24,7 @@
 
  --card-padding: 1.8rem;
  --padding-1: 1.2rem;
- --box-shadow: 0 2rem 3rem var(var(--color-light))
+ --box-shadow: 0 2rem 3rem (var(--color-light))
 }
 *{
   margin: 0;
@@ -124,11 +124,135 @@ aside .side-bar a.active::before{
 }
 
 aside .side-bar a:hover span{
- margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 aside .side-bar a span{
   transition: all 300ms ease;
 }
 
-/* Main Session Next */
+/* Main section */
+main {
+  margin-top: 0.8rem;
+}
+
+main .date {
+  display: inline-block;
+  background-color: var(--color-info-light);
+  border-radius: var(--border-radius-1);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+main .date input[type='date'] {
+  border: none;
+  background: transparent;
+  columns: var(--color-dark);
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+main .card-container > div {
+  background: var(--color-white);
+  padding: var(--padding-1);
+  border-radius: var(--card-border-radius);
+
+  /* Box shadow */
+  box-shadow: 0 1rem 1rem var(--color-info-light);
+  margin-top: 1rem;
+  transition: all 300ms ease;
+}
+
+.card-container > div:hover {
+  box-shadow: none;
+}
+
+.card-container span {
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card-container > div.expenses span {
+  background: var(--color-danger);
+}
+
+.card-container > div.income span {
+  background: var(--color-success);
+}
+
+.card-container > div .card-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-container h4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.card-container .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+.card-container svg circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.card-container .sales svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+.card-container .expenses svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+
+.card-container .income svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+.card-container .sales .percent,
+.card-container .expenses .percent,
+.card-container .income .percent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left p {
+  font-weight: 800;
+}
+
+.para {
+  display: block;
+  margin-top: 1.4rem;
+  color: var(--color-info-dark);
+}
